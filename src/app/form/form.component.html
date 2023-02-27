@@ -1,0 +1,37 @@
+
+<br><br><br>
+<span>Đây là: {{name}}</span>
+<br>
+<span>Đây là: {{password}}</span>
+<br>
+<span>Đây là: {{vehicle}}</span>
+<div class="container">
+    <h1>Đăng nhập</h1>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name:</label> <br>
+            <input type="text" class="form-control" id="name" required
+            [(ngModel)]="name"
+            name="name"
+            />
+            <br>
+            <span *ngIf="name===''" class="errorMessage">*Cần nhập username</span>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label><br>
+            <input type="text" class="form-control" id="password" required
+            [(ngModel)]="password"
+            name="password"/>
+            <br>
+            <span *ngIf="password===''" class="errorMessage">*Cần nhập password</span>
+        </div><br>
+        <div class="form-group">
+            <label for="vehicle">Xe:</label><br>
+            <select id="vehicle" [(ngModel)]="vehicle" name="vehicle">
+                <option *ngFor="let vehicle of vehicles">{{vehicle}}</option>
+            </select>
+        </div>
+        <br><br>
+        <button type="submit" class="btn_login" [disabled]="!loginForm.form.valid" >Đăng nhập</button> 
+    </form>
+</div>

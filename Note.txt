@@ -1,0 +1,37 @@
+Full list of Angular Events
+(click)= "myFunction()"
+(dbclick)= "myFunction()"
+(submit)= "myFunction()"
+(blur)= "myFunction()"
+(focus)= "myFunction()"
+(scroll)= "myFunction()"
+(cut)= "myFunction()"
+(copy)= "myFunction()"
+(paste)= "myFunction()"
+(keyup)= "myFunction()"
+(keypress)= "myFunction()"
+(keydown)= "myFunction()"
+(mouseup)= "myFunction()"
+(mousedown)= "myFunction()"
+(mouseenter)= "myFunction()"
+(drag)= "myFunction()"
+(drop)= "myFunction()"
+(dragover)= "myFunction()"
+
+Built-in pipes available
+lowercase
+uppercase
+date
+currency
+json
+percent
+number:'3.2-5'
+slice
+
+
+DIRECTIVES: chỉ thị
+Component directives: thành phần
+Structural directives: cấu trúc
+- A structure directive basically deals with manipulating the dom elements. Structural directives have a * sign before the directive.
+For example: *ngIf, *ngFor
+Attribute directives: thuộc tính

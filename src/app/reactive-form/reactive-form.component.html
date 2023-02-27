@@ -1,0 +1,45 @@
+<br><br>
+<p>Click vào Menu Icon để thấy sự thay đổi</p>
+ 
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  <script>
+    function myFunction(x) {
+      x.classList.toggle("change");
+    }
+    </script>
+
+
+<br><br>
+<div>
+    <h1>Học về reactive form</h1>
+    <label>Name:
+        <input type="text" [formControl]="name">
+    </label>
+    <p>Value: {{name.value}}</p>
+    <br>
+    <button (click)="UpdateName()" class="btn-submit">Update Name</button>
+</div>
+<br> <br>
+<div>
+    <h2>Group Form</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <label>FirstName:
+            <input type="text" formControlName="firstName" required="">
+            <br>
+            <span *ngIf="!profileForm.controls.firstName.valid" class="errormessage">*Cần nhập firstname</span>
+        </label>
+        <br>
+        <label>LastName:
+            <input type="text" formControlName="lastName" required="">
+            <br>
+            <span *ngIf="!profileForm.controls.lastName.valid" class="errormessage">*Cần nhập lastname</span>
+        </label>
+        <br><br>
+        <button type="submit" [disabled]="!profileForm.valid" class="btn-submit">Login</button>
+    </form>
+   
+</div>

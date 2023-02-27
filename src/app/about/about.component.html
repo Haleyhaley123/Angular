@@ -1,0 +1,69 @@
+
+<!-- <h1 class="myfirstcss">Đây là component About</h1>
+<span class="myfirstcss">đây là About</span>
+<h3>Chào bạn {{name | uppercase}}</h3>
+<h3>Bạn năm nay {{age}}</h3>
+<span *ngIf="age <18" class="underAge">Bạn dưới 18 tuổi</span>
+<br>
+<span *ngIf="age >18" class="OverAge">Bạn già rồi</span>
+<br>
+<h4> ng-Template</h4>
+<span *ngIf="age <18; then condition1; else condition2" class="underAge">
+</span>
+<ng-template #condition1 class="underAge">Bạn dưới 18 tuổi</ng-template>
+<ng-template #condition2 class="OverAge">Bạn trên 18 tuổi</ng-template>
+<br>
+<button (click)="tangtuoi()" appBold>
+    Tăng tuổi
+</button> -->
+<br><br>
+<div>
+    <h1>Danh sách form</h1>
+    Bạn có <span class="badge1">&nbsp;{{count}}&nbsp;</span>tin nhắn
+        <br>
+        Số tin nhắn <span class="badge1">{{count}}</span>
+        <br>
+    
+    <div>
+        <table id="listvisit" style="border-collapse:collapse;" class="table">
+            <tr>
+                <th>STT</th>
+                <th>Id</th>
+                <th>VisitId</th>
+                <th>CreatedBy</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>Version</th>
+            </tr>
+            <tr *ngFor="let value of Datas">
+                <td></td>
+                <td>{{value.Id}}</td>
+                <td>{{value.VisitId}}</td>
+                <td>{{value.CreatedBy}}</td>
+                <td>{{value.CreatedAt}}</td>
+                <td>{{value.UpdatedAt}}</td>
+                <td>{{value.Version}}</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!-- <label>{{forms[0] | json}}</label>  -->
+        <!-- <br><br>
+        <br><br>
+        <label *ngFor="let _form of Datas">
+            <label> {{_form | json}}</label> <br>
+        </label> -->
+        <br><br>
+       <button (click)="addPosts()">Tạo mới</button>
+    </div>
+    <br>
+    <br>
+    
+    <h3>Extended Fab</h3>
+    <div class="example-button-row">  
+      <a mat-fab extended routerLink=".">
+        <mat-icon>heard</mat-icon>
+        Yêu thích
+      </a>
+    </div>
+</div>

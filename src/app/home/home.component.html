@@ -1,0 +1,41 @@
+<br>
+<div>
+    <h1 class="myfirstcss">Đây là component Home</h1>
+    <span class="myfirstcss">đây là home</span>
+    <h3>Chào bạn {{name | uppercase}}</h3>
+    <h3>Bạn năm nay {{age}}</h3>
+    <span *ngIf="age <18" class="underAge">Bạn dưới 18 tuổi</span>
+    <br>
+    <span *ngIf="age >18" class="OverAge">Bạn già rồi</span>
+    <br><br><br>
+    Danh sách xe <br>
+    <div *ngFor="let vehicle of vehicles">
+        <li>{{vehicle}}</li>
+    </div>
+    <br><br>
+    <div>
+        <select>
+            <option *ngFor="let vehicle of vehicles">{{vehicle}}</option>
+        </select>
+    </div>
+    <br><br><br>
+    Two Way Data Binding <br>
+    <div class="myfirstcss">
+        <input [(ngModel)]= "name"/>
+    </div>
+    <br>
+    <h4> Học vể ng-Template</h4>
+    <span *ngIf="age <18; then condition1; else condition2"></span>
+    <ng-template #condition1><span appBold>Bạn dưới 18 tuổi</span></ng-template>
+    <ng-template #condition2 class="OverAge">Bạn trên 18 tuổi</ng-template>
+    <br>
+    <button (click)="tangtuoi()" appBold>
+        Tăng tuổi
+    </button>
+    <br>
+    <h5>Pipe dùng chuyển đổi dữ liệu</h5>
+    <span>{{vehicles |json}}</span>
+    <!-- <a [routerLink]="['./about']">contact us</a> -->
+    
+    
+</div>
